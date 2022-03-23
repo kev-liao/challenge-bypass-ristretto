@@ -293,7 +293,7 @@ impl PublicKey {
 ///
 /// This is a server secret and should NEVER be revealed to the client.
 #[cfg_attr(not(feature = "cbindgen"), repr(C))]
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct SigningKey {
     /// A `PublicKey` showing a committment to this particular key
     pub public_key: PublicKey,
