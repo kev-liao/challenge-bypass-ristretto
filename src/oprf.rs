@@ -91,7 +91,7 @@ impl TokenPreimage {
 /// Since a token includes the blinding factor it should be treated
 /// as a client secret and NEVER revealed to the server.
 #[cfg_attr(not(feature = "cbindgen"), repr(C))]
-#[derive(Debug)]
+#[derive(Clone, Debug)]
 pub struct Token {
     /// `t` is a `TokenPreimage`
     pub(crate) t: TokenPreimage,
