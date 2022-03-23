@@ -425,7 +425,7 @@ impl SignedToken {
 /// it should nevertheless not be sent between the two.
 #[cfg_attr(not(feature = "cbindgen"), repr(C))]
 #[allow(non_snake_case)]
-#[derive(Debug)]
+#[derive(Clone, Debug)]
 pub struct UnblindedToken {
     /// `t` is the `TokenPreimage`
     pub t: TokenPreimage,
