@@ -35,7 +35,7 @@ pub const VERIFICATION_SIGNATURE_LENGTH: usize = 64;
 /// The hash function must ensure the discrete log with respect to other points is unknown.
 /// In this construction `RistrettoPoint::from_uniform_bytes` is used as the hash function.
 #[cfg_attr(not(feature = "cbindgen"), repr(C))]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash)]
 pub struct TokenPreimage([u8; TOKEN_PREIMAGE_LENGTH]);
 
 impl PartialEq for TokenPreimage {
