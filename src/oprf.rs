@@ -432,7 +432,7 @@ pub struct UnblindedToken {
     /// `W` is the unblinded signed `CompressedRistretto` point
     ///
     /// \\(W = Q^{1/r} = P^{k(1/r)} = T^{rk(1/r)} = T^k\\)
-    W: CompressedRistretto,
+    pub W: CompressedRistretto,
 }
 
 #[cfg(any(test, feature = "base64"))]
